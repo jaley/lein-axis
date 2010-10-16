@@ -1,8 +1,7 @@
 (ns leiningen.axis
   (:use [clojure.java.shell :only [sh]]
 	[clojure.string :only [join]]
-	[leiningen.classpath :only [get-classpath]])
-  (:gen-class))
+	[leiningen.classpath :only [get-classpath]]))
 
 (def *WSDL2Java-class* "org.apache.axis.wsdl.WSDL2Java")
 
