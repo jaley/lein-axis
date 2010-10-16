@@ -5,18 +5,15 @@ Simple Leiningen plug-in to speed up working with Apache Axis and WSDL files
 Use Apache Axis to generate Java classes for WSDL files.
 
 You will need to add Apache Axis to your project as a dependency, e.g.:
-    ...
     :dependencies [[org.clojure/clojure "1.2.0"]
                    [org.clojure/clojure-contrib "1.2.0"]
                    [axis/axis "1.4"]]
 
 Also, this plug-in should be added to your project as a dev-dependency:
-
-    dev-dependencies [[lein-axis "0.1.1"]]
+    :dev-dependencies [[lein-axis "0.1.1"]]
 
 Then, to configure what WSDL files to use and where to put the generated
 source files:
-    ...
     :java-source-path "src/java"
     :axis [["src/wsdl/myservice.wsdl" "generated.myservice"]
     	   ["src/wsdl/myotherservice.wsdl" "generated.myotherservice"]]
@@ -34,7 +31,7 @@ don't provide this value.
 If you're generating server-side classes, or need to add extra arguments,
 you can do this per-WSDL file, like so:
 
-    :axis["src/wsdl/myservice.wsdl" "generated.myservice" ["-s"]]
+    :axis ["src/wsdl/myservice.wsdl" "generated.myservice" ["-s"]]
 
 
 ## License
