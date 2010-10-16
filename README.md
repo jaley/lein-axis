@@ -7,8 +7,8 @@ Use Apache Axis to generate Java classes for WSDL files.
 You will need to add Apache Axis to your project as a dependency, e.g.:
     ...
     :dependencies [[org.clojure/clojure "1.2.0"]
-    		   [org.clojure/clojure-contrib "1.2.0"]
-		   [axis/axis "1.4"]]
+                   [org.clojure/clojure-contrib "1.2.0"]
+                   [axis/axis "1.4"]]
 
 Then, to configure what WSDL files to use and where to put the generated
 source files:
