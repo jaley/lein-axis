@@ -12,7 +12,7 @@ You will need to add Apache Axis to your project as a dependency, e.g.:
 
 Also, this plug-in should be added to your project as a dev-dependency:
 
-    dev-dependencies [[lein-axis "0.1.0"]]
+    dev-dependencies [[lein-axis "0.1.1"]]
 
 Then, to configure what WSDL files to use and where to put the generated
 source files:
