@@ -13,7 +13,7 @@
     "-o" (get p :java-source-path "src/java")
     "-p" package
     wsdl]
-   extra)
+   extra))
 
 (defn axis
   "Use Apache Axis to generate Java classes for WSDL files.
@@ -41,5 +41,5 @@ don't provide this value.
   (doseq [cmd-out (map (comp (partial apply sh)
 			     (partial cmd project))
 		       (:axis project))]
-    (print (:err cmd))))
+    (print (str (:err cmd)))))
 
