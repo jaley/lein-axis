@@ -7,11 +7,13 @@
 
 (defn- cmd
   "Convert the [wsdl target-package] vector from project.clj to a WSDL2Java call."
-  [p [wsdl package]]
-  ["java" "-cp" (join java.io.File/pathSeparatorChar (get-classpath p)) *WSDL2Java-class*
-   "-o" (get p :java-source-path "src/java")
-   "-p" package
-   wsdl])
+  [p [wsdl package extra]]
+  (concat
+   ["java" "-cp" (join java.io.File/pathSeparatorChar (get-classpath p)) *WSDL2Java-class*
+    "-o" (get p :java-source-path "src/java")
+    "-p" package
+    wsdl]
+   extra)
 
 (defn axis
   "Use Apache Axis to generate Java classes for WSDL files.

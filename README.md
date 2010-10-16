@@ -23,6 +23,11 @@ classes. lein-axis uses this setting as the target directory (for the
 root of the generated packages). src/java is used as a default if you
 don't provide this value.
 
+If you're generating server-side classes, or need to add extra arguments,
+you can do this per-WSDL file, like so:
+
+    :axis["src/wsdl/myservice.wsdl" "generated.myservice" ["-s"]]
+
 
 ## Installation
 
