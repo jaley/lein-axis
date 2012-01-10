@@ -4,4 +4,5 @@
                  [org.clojure/clojure-contrib "1.2.0"]
 		 [axis/axis "1.4"]]
   :dev-dependencies [[swank-clojure "1.2.1"]]
+  :eval-in-leiningen true
   )

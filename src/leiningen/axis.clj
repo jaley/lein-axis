@@ -41,5 +41,5 @@ don't provide this value.
   (doseq [cmd-out (map (comp (partial apply sh)
 			     (partial cmd project))
 		       (:axis project))]
-    (print (str (:err cmd)))))
+    (print (str (:err cmd-out)))))
 
