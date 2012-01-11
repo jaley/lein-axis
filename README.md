@@ -10,15 +10,18 @@ You will need to add Apache Axis to your project as a dependency, e.g.:
                    [axis/axis "1.4"]]
 
 Also, this plug-in should be added to your project as a dev-dependency:
-    :dev-dependencies [[lein-axis "0.1.1"]]
+
+    :dev-dependencies [[lein-axis "0.2"]]
 
 Then, to configure what WSDL files to use and where to put the generated
 source files:
+
     :java-source-path "src/java"
     :axis [["src/wsdl/myservice.wsdl" "generated.myservice"]
     	   ["src/wsdl/myotherservice.wsdl" "generated.myotherservice"]]
 
 Then, simply run:
+
     $ lein deps
     $ lein axis
 
